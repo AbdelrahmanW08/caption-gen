@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Caption Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Caption Generator</h1>
+        <div class="upload-area">
+            <input type="file" id="imageUpload" accept="image/*">
+            <label for="imageUpload" class="upload-button">Upload Image</label>
+            <p id="fileName">No file chosen</p>
+        </div>
+        <button id="generateCaption" disabled>Generate Caption</button>
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <p>Generating caption...</p>
+        </div>
+        <div id="captionResult" class="hidden">
+            <h2>Generated Caption:</h2>
+            <p id="captionText"></p>
+        </div>
+        <div id="error" class="hidden">
+            <h2 style="color: red;">Error:</h2>
+            <p id="errorText"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
