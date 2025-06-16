@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let selectedFile = null;
 
+    // Ensure all message divs are hidden on initial load
+    hideAllMessages();
+
     imageUpload.addEventListener('change', (event) => {
         selectedFile = event.target.files[0];
         if (selectedFile) {
