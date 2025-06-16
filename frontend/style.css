@@ -78,6 +78,25 @@ button:disabled {
     cursor: not-allowed;
 }
 
+.image-preview-area {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    min-height: 150px; /* Placeholder height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure image doesn't overflow */
+}
+
+#imagePreview {
+    max-width: 100%;
+    max-height: 300px; /* Limit height to prevent very large images */
+    display: block; /* Remove extra space below image */
+    border-radius: 4px;
+}
+
 .hidden {
     display: none !important;
 }

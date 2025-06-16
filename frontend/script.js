@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const imageUpload = document.getElementById('imageUpload');
     const fileNameDisplay = document.getElementById('fileName');
     const generateCaptionBtn = document.getElementById('generateCaption');
+    const imagePreview = document.getElementById('imagePreview');
     const loadingDiv = document.getElementById('loading');
     const captionResultDiv = document.getElementById('captionResult');
     const captionText = document.getElementById('captionText');
@@ -19,9 +20,20 @@ document.addEventListener('DOMContentLoaded', () => {
             fileNameDisplay.textContent = selectedFile.name;
             generateCaptionBtn.disabled = false;
             hideAllMessages();
+
+            // Display image preview
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                imagePreview.src = e.target.result;
+                imagePreview.classList.remove('hidden');
+            };
+            reader.readAsDataURL(selectedFile);
+
         } else {
             fileNameDisplay.textContent = 'No file chosen';
             generateCaptionBtn.disabled = true;
+            imagePreview.src = '#';
+            imagePreview.classList.add('hidden');
         }
     });
 
