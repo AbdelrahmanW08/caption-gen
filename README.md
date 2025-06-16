@@ -36,46 +36,14 @@ cd backend
 
 #### Install Python Dependencies
 
-It is highly recommended to use a virtual environment to manage dependencies.
-
-1.  **Create a virtual environment (if you don't have one):**
-    ```bash
-    python -m venv venv
-    ```
-2.  **Activate the virtual environment:**
-    *   On Windows:
-        ```bash
-        .\venv\Scripts\activate
-        ```
-    *   On macOS/Linux:
-        ```bash
-        source venv/bin/activate
-        ```
-3.  **Install the required packages:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-#### Get Hugging Face API Token (Optional, not strictly needed for local model inference but good practice for other HF features)
-
-While the current setup runs the model locally, having a Hugging Face token can be useful for other interactions or if you switch to an inference API later.
-
-1.  Go to [Hugging Face](https://huggingface.co/) and create an account if you don't have one.
-2.  Navigate to your profile settings and generate a new access token.
-3.  Ensure the token has at least "read" access.
-
-#### Create a `.env` file
-
-In the `backend` directory, create a file named `.env` and add your Hugging Face API token (if you obtained one):
-
+Install the required packages:
+```bash
+pip install -r requirements.txt
 ```
-HF_API_TOKEN="YOUR_HF_API_TOKEN_HERE"
-```
-Replace `"YOUR_HF_API_TOKEN_HERE"` with your actual token. This token is primarily for API access, not for the local model inference in this setup.
 
 #### Run the Backend Server
 
-Make sure your virtual environment is activated. From the `backend` directory, run:
+From the `backend` directory, run:
 ```bash
 python app.py
 ```
